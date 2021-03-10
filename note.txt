@@ -1,0 +1,36 @@
+1.分析需求
+2.编写代码
+3.编写单元测试，看公司的代码规范，一种是把所有文件都放在一个test目录里，或者是每一份文件都有同名的test文件
+4.自测
+5.编写接口文档
+6.提测代码
+
+前端按照接口文档来访问后端
+
+1.发送短信服务
+容联云　　云通讯
+www.yuntongxun.com
+
+2.redis文档
+http://redis-py.readthedocs.io/en/latest
+http://redisdoc.com/index.html
+
+3.图片服务
+1)保存到程序本地，扩容（磁盘满的问题)
+2)备份的问题
+3)多机存储的问题
+4)用户A       图片A
+  用户B       图片B，虽然名字不一样，但是图片是一样的，那存储图片的时候，存储两份还是一份好，保存两份，浪费空间
+
+5)用户A   a.jpg
+  用户B   a.jpg
+  同名图片，但不是同一张，后上传的会覆盖掉之前的内容
+
+文件存储解决方案
+1)  自己搭建文件存储系统  FastDFS  快速分布式文件存储系统, HDFS hadoop分布式文件系统
+2)  选择第三方服务,    七牛云存储
+
+
+4.前端js模板引擎  art-template
+https://aui.github.io/art-template/zh-cn/index.html
+这个扩展库依赖于jquery所以必须放在jquery下方
