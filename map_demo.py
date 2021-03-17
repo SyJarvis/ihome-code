@@ -7,6 +7,7 @@ def add(num1, num2):
     print(num1+num2)
     return num1+num2
 
+
 # 函数，列表１，列表２
 ret = map(add, li1, li2)
 print(type(ret))

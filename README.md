@@ -27,3 +27,12 @@ https://aui.github.io/art-template/zh-cn/index.html
 python manage.py db init
 python manage.py db migrate -m "init table"
 python manage.py db upgrade
+
+账号密码
+13811111112
+123456
+
+
+启动celery
+cd /home/jarvis/Desktop/ihome
+celery -A ihome.tasks.task_sms worker -l info

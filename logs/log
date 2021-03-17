@@ -2099,3 +2099,152 @@ INFO _internal.py:122 127.0.0.1 - - [10/Mar/2021 16:52:47] "GET /api/v1.0/user/h
 INFO _internal.py:122 127.0.0.1 - - [10/Mar/2021 16:54:03] "POST /api/v1.0/houses/info HTTP/1.1" 200 -
 ERROR houses.py:196 'http'
 INFO _internal.py:122 127.0.0.1 - - [10/Mar/2021 16:55:31] "POST /api/v1.0/houses/image HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:21] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/plugins/swiper/css/swiper.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/css/ihome/main.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/plugins/swiper/js/swiper.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/js/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:23] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:24] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:24] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:24] "GET /static/js/template.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:24] "GET /static/js/ihome/index.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:25] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:25] "GET /api/v1.0/houses/index HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:27] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:27] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:31] "GET /static/plugins/swiper/js/maps/swiper.js.map HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:29:31] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:37:02] "GET /newhouse.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:37:02] "GET /static/js/jquery.form.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:37:02] "GET /static/css/ihome/newhouse.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:37:02] "GET /static/js/ihome/newhouse.js HTTP/1.1" 304 -
+INFO houses.py:24 hit redis area_info
+INFO _internal.py:122 127.0.0.1 - - [15/Mar/2021 20:37:03] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:31] "GET /newhouse.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/css/ihome/main.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/js/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/css/ihome/newhouse.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/js/jquery.form.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/js/template.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/js/ihome/newhouse.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:32] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:33] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:33] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:34] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:41] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:41] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:41] "GET /static/js/ihome/register.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:41] "GET /static/images/logo@128x59.png HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 10:59:41] "GET /api/v1.0/image_codes/46da674b-c98e-4371-9a29-186973f58313 HTTP/1.1" 200 -
+ERROR app.py:1423 Exception on /api/v1.0/sms_codes/13824555872 [GET]
+Traceback (most recent call last):
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/jarvis/Desktop/ihome/ihome/api_1_0/verify_code.py", line 197, in get_sms_code
+    send_sms.delay(mobile, [sms_code, int(constants.SMS_CODE_REDIS_EXPIRES/60)], 1)
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/celery/app/task.py", line 421, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/jarvis/flask_ihome/lib/python3.6/site-packages/celery/app/task.py", line 526, in apply_async
+    check_arguments(*(args or ()), **(kwargs or {}))
+TypeError: send_sms() missing 3 required positional arguments: 'to', 'datas', and 'temp_id'
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 11:00:00] "GET /api/v1.0/sms_codes/13824555872?image_code=twre&image_code_id=46da674b-c98e-4371-9a29-186973f58313 HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 11:01:24] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 11:01:24] "GET /api/v1.0/image_codes/04430ed9-c095-43fa-aff7-888303a62949 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 11:01:24] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [16/Mar/2021 11:01:34] "GET /api/v1.0/sms_codes/13824555872?image_code=thqp&image_code_id=04430ed9-c095-43fa-aff7-888303a62949 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:01] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/css/ihome/register.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/css/ihome/main.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/images/logo@128x59.png HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/js/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/js/ihome/register.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:02] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:03] "GET /api/v1.0/image_codes/7a663166-83d8-4b87-955a-a14628ef8afe HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:03] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:04] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:05] "GET /login.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:05] "GET /static/css/ihome/login.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:06] "GET /static/js/ihome/login.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:16] "POST /api/v1.0/sessions HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:16] "GET / HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/plugins/swiper/css/swiper.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/plugins/swiper/js/swiper.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/css/ihome/index.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/js/template.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/js/ihome/index.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /api/v1.0/houses/index HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:17] "GET /static/plugins/swiper/js/maps/swiper.js.map HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:19] "GET /my.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:19] "GET /static/css/ihome/my.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:19] "GET /static/js/ihome/my.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:19] "GET /api/v1.0/user HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:20] "GET /myhouse.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:20] "GET /static/css/ihome/myhouse.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:20] "GET /static/js/ihome/myhouse.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:20] "GET /api/v1.0/users/auth HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:20] "GET /api/v1.0/user/houses HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:16:30] "GET /api/v1.0/user HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:23:03] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:23:05] "GET /api/v1.0/houses/index HTTP/1.1" 200 -
+INFO houses.py:24 hit redis area_info
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:23:05] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:23:06] "GET /api/v1.0/user HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:23:08] "GET /api/v1.0/users/auth HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:23:08] "GET /api/v1.0/user/houses HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:29] "GET /newhouse.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:29] "GET /static/css/ihome/newhouse.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:29] "GET /static/js/jquery.form.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:29] "GET /static/js/ihome/newhouse.js HTTP/1.1" 304 -
+INFO houses.py:24 hit redis area_info
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:29] "GET /api/v1.0/areas HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:31] "GET /api/v1.0/users/auth HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 09:27:31] "GET /api/v1.0/user/houses HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /detail.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /static/css/ihome/detail.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /static/js/ihome/detail.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /api/v1.0/houses/undefined HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:13] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:22] "GET /detail.html?id=1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:23] "GET /api/v1.0/houses/1 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:23] "GET /static/images/houseicon_sprite.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:34] "GET /detail.html?id=2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Mar/2021 15:44:34] "GET /api/v1.0/houses/2 HTTP/1.1" 200 -
