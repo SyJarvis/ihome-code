@@ -2369,3 +2369,7 @@ INFO _internal.py:122 127.0.0.1 - - [18/Mar/2021 15:24:50] "GET /api/v1.0/houses
 INFO houses.py:25 hit redis area_info
 INFO _internal.py:122 127.0.0.1 - - [18/Mar/2021 15:24:50] "GET /api/v1.0/areas HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [18/Mar/2021 15:24:50] "GET /static/plugins/swiper/js/maps/swiper.js.map HTTP/1.1" 404 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [18/Mar/2021 23:41:42] "GET /api/v1.0/session HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [18/Mar/2021 23:41:43] "GET /api/v1.0/houses/index HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [18/Mar/2021 23:41:43] "GET /api/v1.0/areas HTTP/1.1" 200 -
