@@ -123,7 +123,7 @@ class Order(BaseModel, db.Model):
     house_price = db.Column(db.Integer, nullable=False) # 房屋的单价
     amount = db.Column(db.Integer, nullable=False)  # 房屋的单价
     status = db.Column(
-        db.Enum(
+        db.Enum(     # 枚举
             "WAIT_ACCEPT",  # 待接单
             "WAIT_PAYMENT", # 待支付
             "PAID",     # 已支付
@@ -132,7 +132,7 @@ class Order(BaseModel, db.Model):
             "CANCELED",     # 已取消
             "REJECTED", # 已拒单
         ),
-        default="WAIT_ACCEPT", index=True)
+        default="WAIT_ACCEPT", index=True)   # 指明在mysql中这个字段建立索引，加快查询速度
     comment = db.Column(db.Text)    # 订单的评论信息或者拒单原因
     trade_no = db.Column(db.String(80))     # 交易的流水号，支付宝的
 
@@ -141,7 +141,16 @@ class Order(BaseModel, db.Model):
         order_dict = {
             "order_id": self.id,
             "title": self.house.title,
+            "img_url": constants.QINIU_URL_DOMAIN + self.house.index_image_url,
+            "start_date": self.begin_date.strftime("%Y-%m-%d"),
+            "end_date": self.end_date.strftime("%Y-%m-%d"),
+            "ctime": self.create_time.strftime("%Y-%m-%d %H:%M:%S"),
+            "days": self.days,
+            "amount": self.amount,
+            "status": self.status,
+            "comment": self.comment if self.comment else ""
         }
+        return order_dict
 
 
 

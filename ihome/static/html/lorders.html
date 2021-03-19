@@ -55,6 +55,8 @@
                                             已完成
                                         {{else if "REJECTED" == order.status}}
                                             已拒单
+                                        {{else if "WAIT_PAYMENT" == order.status}}
+                                            已接单
                                         {{/if}}
                                     </span>
                                 </li>

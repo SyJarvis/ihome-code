@@ -34,3 +34,19 @@ http://redisdoc.com/index.html
 4.前端js模板引擎  art-template
 https://aui.github.io/art-template/zh-cn/index.html
 这个扩展库依赖于jquery所以必须放在jquery下方
+
+sql语句优化
+    使用索引　注意关键字顺序　最左原则
+    不要select *
+    能使用联合查询，不使用嵌套（子查询）
+
+    se
+
+d. 缓存
+    redis memcached
+
+e 读写分离
+    主从热备份       主(写　    增删改）    从（查）
+
+f. 分库分表，水平分库分表
+http://www.infoq.com/cn/articled/key-steps-and-likely-problems-of-split-table

@@ -305,8 +305,7 @@ def get_house_detail(house_id):
         ret = None
     if ret:
         current_app.logger.info("hit house info redis")
-        return '{"errno":"0", "errmsg":"OK", "data":{"user_id":%s, "house":%s}}' % {user_id, ret}, \
-                200, {"Content-Type": "application/json"}
+        return '{"errno":"0", "errmsg":"OK", "data":{"user_id":%s, "house":%s}}' % (user_id, ret), 200, {"Content-Type": "application/json"}
 
     # 查询数据库
     try:

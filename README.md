@@ -10,6 +10,7 @@
 
 ### 运行
 python manage.py runserver
+python manage.py runserver -h 192.168.0.103 -p 8000
 
 
 ### 荣联云通讯
@@ -47,3 +48,14 @@ python manage.py db upgrade
 cd /home/jarvis/Desktop/ihome
 celery -A ihome.tasks.task_sms worker -l info
 ```
+
+
+python manage.py db migrate -m "add trade_no"
+python manage.py db upgrade
+
+
+支付宝是要收手续费的
+费率是千分之六
+
+
+update ih_order_info set id=43 where id=3;

@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-import datetime
+from datetime import datetime
 from flask import request, g, jsonify, current_app
 from ihome import db, redis_store
 from ihome.utils.commons import login_required
@@ -29,11 +29,13 @@ def save_order():
     # 日期格式检查
     try:
         # 将请求的时间参数字符串转换为datetime类型
-        start_date = datetime.datetime.strptime(start_date_str, "%Y-%m-%d")
-        end_date = datetime.datetime.strptime(end_date_str, "%Y-%m-%d")
+        start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
+        end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
+        print(end_date)
         assert start_date <= end_date
         # 计算预订的天数
         days = (end_date - start_date).days + 1
+        print(days)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.PARAMERR, errmsg="日期格式错误")
@@ -101,16 +103,18 @@ def get_user_orders():
     # 查询订单数据
     try:
         if "landlord" == role:
-            # 以房东的身份查询订单
-            # 先查询属于自己的房子有哪些
+            # 以房东的身份查询订单, 先查询属于自己的房子有哪些
             houses = House.query.filter(House.user_id == user_id).all()
             houses_ids = [house.id for house in houses]
             # 再查询预定了自己房子的订单
-            orders = Order.query.filter(Order.user_id == user_id).order_by(Order.create_time.desc())
+            orders = Order.query.filter(Order.house_id.in_(houses_ids)).order_by(Order.create_time.desc()).all()
+            print(orders)
         else:
             # 以房客的身份查询订单，查询自己预订的订单
-            orders = Order.query.filter(Order.user_id == user_id).order_by(Order.house_price.desc())
+            print("房客")
+            orders = Order.query.filter(Order.user_id == user_id).order_by(Order.house_price.desc()).all()
     except Exception as e:
+        print("error")
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg="查询订单信息失败")
 
@@ -119,11 +123,13 @@ def get_user_orders():
     if orders:
         for order in orders:
             orders_dict_list.append(order.to_dict())
-
+    print(orders_dict_list)
+    print("orders....")
     return jsonify(errno=RET.OK, errmsg="OK", data={"orders": orders_dict_list})
 
 
-@api.route("/orders/<int:order_id>/status", methods=["POST"])
+
+@api.route("/orders/<int:order_id>/status", methods=["PUT"])
 @login_required
 def accept_reject_order(order_id):
     """接单，拒单"""
@@ -137,3 +143,86 @@ def accept_reject_order(order_id):
     action = req_data.get("action")
     if action not in ("accept", "reject"):
         return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
+
+    try:
+        # 根据订单号查询订单，并且要求订单处于等待接单的状态
+        order = Order.query.filter(Order.id == order_id, Order.status == "WAIT_ACCEPT").first()
+        house = order.house
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg="无法获取订单数据")
+
+    # 确保房东只能修改属于自己房子的订单
+    if not order or house.user_id != user_id:
+        return jsonify(errno=RET.REQERR, errmsg="操作无效")
+
+    if action == "accept":
+        # 接单
+        order.status = "WAIT_PAYMENT"
+    elif action == "reject":
+        # 拒单，要求用户传递拒单原因
+        reason = req_data.get("reason")
+        if not reason:
+            return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
+        order.status = "REJECTED"
+        order.comment = reason
+
+    try:
+        db.session.add(order)
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(errno=RET.DBERR, errmsg="操作失败")
+
+    return jsonify(errno=RET.OK, errmsg="OK")
+
+
+
+@api.route("/orders/<int:order_id>/comment", methods=["PUT"])
+@login_required
+def save_order_comment(order_id):
+    """保存订单评论信息"""
+    user_id = g.user_id
+    # 获取参数
+    req_data = request.get_json()
+    comment = req_data.get("comment") # 评价信息
+
+    # 检查参数
+    if not comment:
+        return jsonify(errno=RET.PARAMERR, errmsg="参数错误")
+
+    try:
+        # 需要确保只能评论自己下的订单，而且订单处于待评价状态才可以
+        order = Order.query.filter(Order.id == order_id, Order.user_id == user_id,
+                                   Order.status == "WAIT_COMMENT").first()
+        house = order.house
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify(errno=RET.DBERR, errmsg="无法获取订单数据")
+
+    if not order:
+        return jsonify(errno=RET.REQERR, errmsg="操作无效")
+
+    try:
+        # 将订单的状态设置为已完成
+        order.status = "COMPLETE"
+        # 保存订单的评价信息
+        order.comment = comment
+        # 将房屋的完成订单数增加１
+        house.order_count += 1
+        db.session.add(order)
+        db.session.add(house)
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify(errno=RET.DBERR, errmsg="操作失败")
+
+    # 因为房屋详情中有订单的评价信息，为了让最新的评价信息展示在房屋详情中，所以删除redis中关于本订单房屋的详情
+    try:
+        redis_store.delete("house_info_%s" % order.house.id)
+    except Exception as e:
+        current_app.logger.error(e)
+
+    return jsonify(errno=RET.OK, errmsg="OK")
