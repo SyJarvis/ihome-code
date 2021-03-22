@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-from flask import Blueprint, current_app, make_response
+from flask import Blueprint, current_app, make_response, request
 from flask_wtf import csrf
 
 # 提供静态文件的蓝图
@@ -13,6 +13,7 @@ html = Blueprint("web_html", __name__)
 @html.route("/<re(r'.*'):html_file_name>")
 def get_html(html_file_name):
     """提供html文件"""
+    print(request.remote_addr)
     if not html_file_name:
         html_file_name = "index.html"
     # 如果资源名不是faviocn.ico，就拼接
